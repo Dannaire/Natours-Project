@@ -3,6 +3,9 @@
     padding: 25rem 0;
     margin-top: -20vh;
 
+    @include respond(custom-medium) {
+        padding: 20rem 3rem;
+    }
     @include respond(tab-port) {
         padding: 20rem 0;
     }
@@ -22,6 +25,9 @@
     & > * {
         transform: skewY(7deg);
     }
+    @include respond(custom-medium) {
+        padding: 20rem 3rem;
+    }
 
     @include respond(tab-port) {
         padding: 10rem 0;
@@ -34,6 +40,9 @@
     padding: 25rem 0 15rem 0;
     margin-top: -10rem;
 
+    @include respond(custom-medium) {
+        padding: 20rem 3rem;
+    }
     @include respond(tab-port) {
         padding: 20rem 0 10rem 0;
     }
@@ -42,6 +51,10 @@
 .section-stories {
     position: relative;
     padding: 15rem 0;
+
+    // @include respond(custom-medium) {
+    //     padding: 20rem 3rem;
+    // }
 
     @include respond(tab-port) {
         padding: 10rem 0;
@@ -52,6 +65,9 @@
     padding: 15rem 0;
     background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
+    @include respond(custom-medium) {
+        padding: 10rem 3rem;
+    }
     @include respond(tab-port) {
         padding: 10rem 0;
     }

@@ -22,17 +22,28 @@
         background-color: $color-white;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         border-radius: 3px;
-        display: table;
+        display: flex;
         overflow: hidden;
         opacity: 0;
         transform: translate(-50%, -50%) scale(.25);
         transition: all .5s .2s;
+
+        @include respond(tab-land){
+            // display: none;
+            display: table;
+        }
     }
 
     &__left {
         width: 33.333333%;
-        display: table-cell;
-        @include respond(tab-port){
+        // display: table-cell;
+        display: flex;
+        flex-direction: column;
+        // vertical-align: middle;
+        line-height: 0;
+        // padding: 3rem 5rem;
+        padding: 0;
+        @include respond(tab-land){
             display: none;
         }
     }
@@ -46,13 +57,18 @@
 
     &__img {
         display: block;
+        // max-width: 100%;
         width: 100%;
-        @include respond(tab-port){
+        height: 100%;
+        object-fit: cover;
+        // border:8px solid red ;
+
+        @include respond(tab-land){
             display: none;
         }
-     
+        
     }
-
+ 
     &__text {
         font-size: 1.4rem;
         margin-bottom: 4rem;
@@ -71,7 +87,7 @@
         hyphens: auto;
         @include respond(tab-port){
             // display: none;
-            // font-size: 1.4rem;
+            font-size: 1.2rem;
             margin-bottom: 2rem;
            
         }
